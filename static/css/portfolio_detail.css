@@ -1,0 +1,22 @@
+.pf_detail_wrap {
+  width: 100%;
+  border: 1px solid #F09819;
+  margin: 20px 0;
+  padding: 20px 40px;
+} .pf_detail_wrap:after { content: ""; display: block; clear: both; }
+
+.pf_detail_date { text-align: center; color: #F09819; }
+.pf_detail_box {
+    width: 30%;
+    margin: 10px auto 10px auto;
+    text-align: center;
+}
+.pf_detail_box:after { content: ""; clear:both; display: block; }
+
+.pf_detail_name { text-align: center; margin-top: 10px; margin-bottom: 20px; }
+.pf_detail_description { border: 1px dotted #888;  padding: 10px; }
+.pf_detail_description h3 { margin-bottom: 10px; }
+
+.pf_detail_img_box { margin-top: 20px; padding: 10px; border: 1px dotted #888; }
+.pf_detail_img_box img { width: 100%; }
+.pf_detail_img_box p { margin-top: 10px; color: #555; }

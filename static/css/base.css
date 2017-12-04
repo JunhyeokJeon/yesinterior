@@ -1,0 +1,188 @@
+/* setting */
+@charset "UTF-8";
+* {
+  padding: 0; margin: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+li, ul { list-style: none; }
+a { text-decoration: none !important; color: black; }
+body { font-family: "맑은 고딕"; }
+img { border: none; vertical-align: bottom; }
+
+/* none_header */
+.none_header {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    display: none;
+    box-shadow: 0px 1px 10px 0px rgba(50, 50, 50, 0.75);
+    background: #F09819; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f09819, #edde5d); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f09819, #edde5d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.none_header:after { content: ""; display: block; clear: both; }
+
+/* sub_header */
+.sub_header {
+    width: 100% !important;
+    height: auto !important;
+    position: fixed !important;
+    top: 0 !important;
+    box-shadow: 0px 1px 10px 0px rgba(50, 50, 50, 0.75) !important;
+    background: #667db6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/*
+    background: #F09819 !important;
+    background: -webkit-linear-gradient(to right, #f09819, #edde5d) !important;
+    background: linear-gradient(to right, #f09819, #edde5d) !important;
+*/} .sub_header:after { content: "" !important; display: block !important; clear: both !important; }
+
+/* wrap */
+.top_wrap {
+    width: 100%;
+    height: 646px;
+    background-image: url(../img/home_banner.png);
+}
+.top_wrap:after { content: ""; display: block; clear: both; }
+
+/* top */
+.header { margin: 0 auto; }
+.header:after { content: ""; display: block; clear: both; }
+.top_logo {
+    width: 25%;
+    height: auto;
+    line-height: 110px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    float: left;
+}
+.top_logo a { color: #fff !important; }
+.top_menu { width: 60%; height: auto; float: left; margin-bottom: 5px; }
+.top_menu ul { width: 100%; }
+.top_menu ul li { width: 17%; float: left; }
+.top_menu ul li a {
+    color: #fff;
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+    padding: 5px 0 15px 0;
+    transition: all 0.2s;
+    border-radius: 1em;
+    border: 1px solid rgba(50, 50, 50, 0);
+}
+.top_menu ul li a:hover {
+    border: 1px solid #fff;
+}
+.top_menu ul li a i { font-size: 30px; padding: 17px 5px 5px 5px; }
+.top_menu ul li p { font-size: 14px; }
+.top_user {
+    width: 15%;
+    float: left;
+    font-family: 'Open Sans', sans-serif;
+    padding: 14px 5px 5px 5px;
+  }
+.top_user_inner {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fff;
+    line-height: 40px;
+    font-weight: bold;
+}
+.top_user_inner p { display: block; text-align: center;  }
+.top_user_inner p:nth-child(2) { border-top: 1px solid #fff;}
+.top_user_inner p a { display: block; color: #fff; height: 40px; line-height: 40px;  }
+.top_user_inner p a:{  transition: all 0.1s;}
+.top_user_inner a:hover { background: #333; }
+.top_user_inner .user_id { color: #fff; }
+
+/* content */
+.content_wrap { width: 100%; }
+.content_wrap:after { content: ""; display: block; clear: both; }
+.content { margin: 0 auto;  }
+
+/* ariticle1 */
+.article_1, .article_2  { width: 100%;}
+.article_1 { margin-top: 20px; }
+.article_1:after, .article_2:after { content: ""; display: block; clear: both; }
+.article_1_title, .article_2_title  { padding: 5px 15px; }
+.article_1_title a, .article_2_title a { font-size: 30px; font-weight: bold; transition: all 0.2s; }
+.article_1_title a { color: #F09819; }
+.article_1_title a:hover { color: #555; }
+.pf_card { width: 33.3333%; padding: 10px; float: left; }
+.pf_card img { width: 100%; height: 300px; }
+.pf_card a { border: 1px solid #dddddd; display: block; color: #333; transition: all 0.2s; }
+.pf_card a:hover { box-shadow: 0px 3px 10px 0px rgba(90, 90, 90, 0.75); }
+.pf_card_txt { padding: 5px 10px; height: 110px; overflow: hidden; }
+.pf_card_txt h3 { padding-top: 10px; }
+.pf_card_txt p { padding-top: 10px; padding-bottom: 5px; }
+
+
+/* ccontent -> article_2 */
+.article_2_wrap { width: 100%; background: url(../img/vision_bg.png); }
+.article_2 {
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.article_2_box {
+    width: 100%;
+    height: 500px;
+    background-image: url('../img/vision.png');
+}
+.article_2_title { margin-bottom: 10px; }
+.article_2_title a { color: #fff; transition: all 0.2s }
+.article_2_title a:hover { color: #333; }
+
+/* footer */
+.sub_footer {
+  width: 100%;
+  height: 86px;
+  box-shadow: 0px -1px 10px 0px rgba(50, 50, 50, 0.75);
+  background: #667db6 ;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6) ;  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6) ; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.main_footer {
+  width: 100%;
+  height: 86px;
+  box-shadow: 0px -1px 10px 0px rgba(50, 50, 50, 0.75);
+  background: #F09819; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f09819, #edde5d); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f09819, #edde5d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* sub_page */
+.sub_content_wrap {
+    margin-top: 110px;
+    width: 100%;
+}
+.sub_content {
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+/* media query */
+@media (max-width: 599px) {
+}
+@media (min-width: 600px) and (max-width: 767px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1080px) {
+    .header, .content, .article_2, .sub_content {
+      width: 1200px;
+    }
+}

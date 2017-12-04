@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head lang="ko">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="{% static 'css/base_user.css' %}" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+    <script type="text/javascript" src=""></script>
+    <script type="text/javascript" src=""></script>
+
+    <title>Interactive Web Design</title>
+</head>
+<body>
+  <div class="sub_bg_img">
+    <img src="{% static 'img/center.png' %}" alt="">
+  </div>
+
+  <div class="sub_wrap">
+      {% block content %}
+
+      {% endblock content %}
+
+      <div class="sub_footer_wrap">
+          <div class="sub_footer">
+
+          </div>
+      </div>
+  </div>
+
+
+
+</body>
+</html>
+
+<!--
+<div class="sub_top_wrap">
+  <div class="sub_top">
+      <span class="sub_top_logo"><a href="{% url 'main' %}">Yes</a></span>
+      <span class="sub_top_nav">{% block title %}~ 예스에게 견적 요청하기 ~{% endblock title %}</span>
+  </div>
+</div>
+
+<div class="sub_content">
+
+
+</div>
+-->

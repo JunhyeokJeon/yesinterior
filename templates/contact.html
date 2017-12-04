@@ -1,0 +1,37 @@
+{% extends "base_user.html" %}
+
+{% load static %}
+{% load bootstrap3 %}
+
+{% block content %}
+<div class="sub_top_wrap">
+  <div class="sub_top">
+      <span class="sub_top_logo"><a href="{% url 'main' %}">Yes</a></span>
+      <span class="sub_top_nav">{% block title %}~ 예스에게 연락하기 ~{% endblock title %}</span>
+  </div>
+</div>
+
+<div class="sub_content">
+    <div class="sub_con_box">
+        <div class="sub_con_box1 sub_cb">
+            <h1>Naver Cafe</h1>
+            <a href="http://cafe.naver.com/yesword">
+                <p>전목수의 인테리어 사랑방</p>
+                <img src="{% static 'img/naver.png' %}" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="sub_con_box">
+        <div class="sub_con_box2 sub_cb">
+            <h1>E-mail</h1>
+            <p><a href="mailto:jjmmss0701@naver.com">jjmmss0701@naver.com</a></p>
+        </div>
+    </div>
+    <div class="sub_con_box">
+        <div class="sub_con_box3 sub_cb">
+          <h1>Do Simple</h1>
+          <p><a href="{% url 'order:do_order' %}">여기서 간단하게 견적 문의하기</a></p>
+        </div>
+    </div>
+</div>
+{% endblock content %}

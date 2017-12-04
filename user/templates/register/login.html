@@ -1,0 +1,27 @@
+{% extends "base_user.html" %}
+
+{% load static %}
+{% load bootstrap3 %}
+
+{% block content %}
+{% bootstrap_css %}
+<div class="sub_top_wrap">
+  <div class="sub_top">
+      <span class="sub_top_logo"><a href="{% url 'main' %}">Yes</a></span>
+      <span class="sub_top_nav">{% block title %}~ 예스의 로그인 페이지입니다 ~{% endblock title %}</span>
+  </div>
+</div>
+
+<div class="sub_content">
+    <form class="form" action="{% url 'user:login' %}" method="post">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+
+        {% buttons %}
+        <button type="submit" name="button" class="btn btn-primary">로그인</button>
+        {% endbuttons %}
+        <input type="hidden" name="next" value="{% url 'main' %}">
+    </form>
+    <a class="register_btn" href="{% url 'user:register' %}">회원가입 하러가기!</a>
+</div>
+{% endblock content %}

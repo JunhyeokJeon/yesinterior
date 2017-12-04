@@ -1,0 +1,19 @@
+{% extends "base_user.html" %}
+
+{% load static %}
+{% load bootstrap3 %}
+
+{% block content %}
+{% bootstrap_css %}
+<div class="sub_top_wrap">
+  <div class="sub_top">
+      <span class="sub_top_logo"><a href="{% url 'main' %}">Yes</a></span>
+      <span class="sub_top_nav">{% block title %}~ 예스에게 연락하기 ~{% endblock title %}</span>
+  </div>
+</div>
+
+<div class="sub_content">
+    현제 협력업체 페이지를 준비중입니다. 조금만 기다려주세요.
+    <a href="{% url 'main' %}">홈화면으로 돌아가기</a>
+</div>
+{% endblock content %}

@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}Yes Interior{% endblock title %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% block extrastyle %}{% endblock extrastyle %}" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+  </head>
+  <body>
+    <!-- sub_header -->
+    <div class="sub_header">
+        <div class="header">
+          <div class="top_logo"><a href="{% url 'main' %}">Yes Interior</a></div>
+          <div class="top_menu">
+              <ul>
+                <li><a class="nh" href="{% url 'portfolio:portfolio' %}"><i class="fa fa-star-half-o" aria-hidden="true"></i><p>포트폴리오</p></a></li>
+                <li><a class="nh" href="{% url 'vision' %}"><i class="fa fa-rocket" aria-hidden="true"></i><p>예스의비전</p></a></li>
+                <li><a class="nh" href="{% url 'contact' %}"><i class="fa fa-phone-square" aria-hidden="true"></i><p>연락하기</p></a></li>
+                <li><a class="nh" href="{% url 'order:do_order' %}"><i class="fa fa-print" aria-hidden="true"></i><p>견적의뢰</p></a></li>
+                <li><a class="nh" href="{% url 'cooperator' %}"><i class="fa fa-thumbs-up" aria-hidden="true"></i><p>협력업체</p></a></li>
+              </ul>
+          </div>
+          <!--
+          <div class="top_user">
+              <div class="top_user_inner">
+                <p><a href="#">Login</a></p>
+                <p><a href="#">Legister</a></p>
+              </div>
+          </div>-->
+        </div>
+    </div>
+
+    <!-- sub_content -->
+    <div class="sub_content_wrap">
+        <div class="sub_content">
+          {% block content %}{% endblock content %}
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="sub_footer">
+      {% block footer %}{% endblock footer %}
+    </footer>
+  </body>
+</html>

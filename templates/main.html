@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- content -->
+<div class="content_wrap">
+    <div class="content">
+        <!-- article_1 -->
+        <article class="article_1">
+            <div class="article_1_title"><a href="{% url 'portfolio:portfolio' %}">Portfolio</a></div>
+            {% for item in object_list|slice:":6" %}
+            <div class="pf_card">
+              <a href="{% url 'portfolio:portfolio_detail' item.id %}">
+                {% for photo in item.portfolioimg_set.all|slice:":1" %}
+                <img src="{{ photo.image.url }}" alt="">
+                {% endfor %}
+                <div class="pf_card_txt">
+                  <h3>{{ item.name }}</h3>
+                  <p>{{ item.description|truncatewords:10 }}</p>
+                </div>
+
+              </a>
+            </div>
+            {% endfor %}
+        </article>
+    </div>
+</div>
+<!-- article_2 -->
+<div class="article_2_wrap">
+  <article class="article_2">
+      <div class="article_2_title"><a href="{% url 'vision' %}">Yes Vision</a></div>
+      <div class="article_2_box"></div>
+  </article>
+</div>
+{% endblock content %}

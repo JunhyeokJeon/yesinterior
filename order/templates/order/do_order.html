@@ -1,0 +1,26 @@
+{% extends "base_user.html" %}
+
+{% load static %}
+{% load bootstrap3 %}
+
+{% block content %}
+{% bootstrap_css %}
+<div class="sub_top_wrap">
+  <div class="sub_top">
+      <span class="sub_top_logo"><a href="{% url 'main' %}">Yes</a></span>
+      <span class="sub_top_nav">{% block title %}~ 예스에게 견적 요청하기 ~{% endblock title %}</span>
+  </div>
+</div>
+
+<div class="sub_content">
+    <form class="form" action="{% url 'order:do_order' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+
+        {% buttons %}
+        <button type="submit" name="button" class="btn btn-primary">견적서 보내기</button>
+        {% endbuttons %}
+        <input type="hidden" name="next" value="{% url 'order:do_order_end' %}">
+    </form>
+</div>
+{% endblock content %}

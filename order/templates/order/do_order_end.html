@@ -1,0 +1,19 @@
+{% extends "base_user.html" %}
+
+{% load static %}
+{% load bootstrap3 %}
+
+{% block content %}
+{% bootstrap_css %}
+<div class="sub_top_wrap">
+  <div class="sub_top">
+      <span class="sub_top_logo"><a href="{% url 'main' %}">Yes</a></span>
+      <span class="sub_top_nav">{% block title %}~ 예스를 이용해주셔서 감사합니다! ~{% endblock title %}</span>
+  </div>
+</div>
+
+<div class="sub_content">
+    견적이 접수되었습니다. 감사합니다. <br>
+    <a href="{% url 'main' %}">홈화면 가기</a>
+</div>
+{% endblock content %}

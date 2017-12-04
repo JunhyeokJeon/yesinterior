@@ -1,0 +1,28 @@
+{% extends "base_sub.html" %}
+
+{% load static %}
+{% block extrastyle %}{% static 'css/portfolio_detail.css' %}{% endblock extrastyle %}
+
+{% block content %}
+<div class="pf_detail_wrap">
+    <h3 class="pf_detail_date">{{ object.create_date | date:"Y-m-d" }}</h3>
+    <div class="pf_detail_box">
+          장소: {{ object.location }} | 공사기간: {{ object.work_period }}
+    </div>
+
+    <h2 class="pf_detail_name">{{ object.name }}</h2>
+    {% if object.description %}
+      <div class="pf_detail_description">
+        <h3>서두</h3>
+        <p>{{ object.description }}</p>
+      </div>
+    {% endif %}
+
+    {% for img in object.portfolioimg_set.all  %}
+        <div class="pf_detail_img_box">
+          <img src="{{ img.image.url }}" class="" alt="">
+          <p>{{ img.description }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock content %}
